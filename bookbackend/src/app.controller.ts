@@ -8,29 +8,29 @@ import {
   Put,
 } from '@nestjs/common';
 import { AppService } from './app.service';
-import { User } from './user.models';
-import { UserUpdateDto } from './userUpdate.dto';
+import { Book } from './user.models';
+import { BookUpdateDto } from './userUpdate.dto';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post()
-  async createUser(@Body() userDto: User) {
-    return this.appService.createUser(userDto);
+  async createBook(@Body() bookDto: Book) {
+    return this.appService.createBook(bookDto);
   }
   @Get()
-  async cgetUser() {
-    return this.appService.getUser();
+  async getBook() {
+    return this.appService.getBook();
   }
 
   @Put(':id')
-  async updateUser(@Param('id') id: string, @Body() updateDto: UserUpdateDto) {
-    return this.appService.updateUser(id, updateDto);
+  async updateBook(@Param('id') id: string, @Body() updateDto: BookUpdateDto) {
+    return this.appService.updateBook(id, updateDto);
   }
 
   @Delete(':id')
-  async deleteUser(@Param('id') id: string) {
-    return this.appService.deleteUser(id);
+  async deleteBook(@Param('id') id: string) {
+    return this.appService.deleteBook(id);
   }
 }

@@ -27,21 +27,23 @@ function AddBook(props) {
 
   
   return (
+    <div className='form'>
     <form onSubmit={submitHandler}>
       <div className={classes.control}>
         <label htmlFor='title'>Name</label>
         <input required type='text' id='title' ref={name} />
       </div>
       <div className={classes.control}>
-        <label htmlFor='opening-text'>Quantity</label>
-        <input required type='text' id='title' ref={quantity} />
+        <label htmlFor='quantity'>Quantity</label>
+        <input required type='text' id='quantity' ref={quantity} />
       </div>
       <div className={classes.control}>
-        <label htmlFor='date'>Price</label>
-        <input required type='text' id='date' ref={price} />
+        <label htmlFor='price'>Price</label>
+        <input required type='text' id='price' ref={price} />
       </div>
       <button>Add Book</button>
     </form>
+    </div>
   )
 }
 

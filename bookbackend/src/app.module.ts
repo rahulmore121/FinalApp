@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserSchema } from './user.models';
+import { BookSchema } from './user.models';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://rahulmore121:rahulmore121@cluster0.zq5whlu.mongodb.net/?retryWrites=true&w=majority',
+      'mongodb+srv://rahulmore121:rahulmore121@cluster1.h3iqmfd.mongodb.net/?retryWrites=true&w=majority',
     ),
-    MongooseModule.forFeature([{ name: 'user', schema: UserSchema }]),
+    MongooseModule.forFeature([{ name: 'book', schema: BookSchema }]),
   ],
   controllers: [AppController],
   providers: [AppService],

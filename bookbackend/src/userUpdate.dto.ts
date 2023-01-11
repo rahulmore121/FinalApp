@@ -1,4 +1,4 @@
-export class UserUpdateDto {
+export class BookUpdateDto {
   quantity: string;
   price: string;
 }

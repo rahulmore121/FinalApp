@@ -9,10 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchBookHandler();
-  });
-
+ 
   const deletebookHandler = async (id) => {
     console.log(id);
     const response = await fetch(`http://localhost:3000/${id}`, {
